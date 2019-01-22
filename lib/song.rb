@@ -15,7 +15,7 @@ attr_accessor :name, :artist, :genre
     @@count += 1
     @@genres << genre
     @@artists << artist
-  
+
   end
 
   def self.count
@@ -34,7 +34,7 @@ attr_accessor :name, :artist, :genre
     genres = {}
     count = 0
     @@genres.each do |k|
-      if genres.key?(k) == false
+      if !genres.key?(k)
         genres[k] = count + 1
       else
         genres[k] += 1
@@ -43,16 +43,9 @@ attr_accessor :name, :artist, :genre
     genres
   end
 
-  def self.artist_count
-    artists = {}
-    count = 0
-    @@artists.each do |k|
-      if artists.key?(k) == false
-        artists[k] = count + 1
-      else
-        artists[k] += 1
-      end
-    end
-    artists
   end
+
+  def self.artist_count
+
+
 end
