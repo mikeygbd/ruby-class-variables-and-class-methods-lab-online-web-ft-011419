@@ -32,7 +32,7 @@ attr_accessor :name, :artist, :genre
     genres = {}
     count = 0
     @@genres.each do |k|
-      if !genres.key?(k)
+      if !genres[k]
         genres[k] = count + 1
       else
         genres[k] += 1
