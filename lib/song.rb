@@ -39,14 +39,10 @@ attr_accessor :name, :artist, :genre
 
 
   def self.artist_count
-    artists = {}
-    count = 0
+    artists = Hash.new(0)
     @@artists.each do |k|
-      if !artists.key?(k)
-        artists[k] = count + 1
-      else
         artists[k] += 1
-      end
+      
     end
     artists
   end
