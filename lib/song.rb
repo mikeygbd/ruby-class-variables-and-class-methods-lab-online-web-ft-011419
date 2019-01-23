@@ -30,10 +30,10 @@ attr_accessor :name, :artist, :genre
 
   def self.genre_count
     genres = {}
-    count = 0
+
     @@genres.each do |k|
       if !genres[k]
-        genres[k] = count + 1
+        genres[k] = + 1
       else
         genres[k] += 1
       end
