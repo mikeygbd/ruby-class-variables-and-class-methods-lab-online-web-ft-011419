@@ -29,7 +29,7 @@ attr_accessor :name, :artist, :genre
   end
 
   def self.genre_count
-    genres = {}
+    genres = Hash.new(0)
 
     @@genres.each do |k|
       if !genres[k]
